@@ -3,40 +3,40 @@
             color: black;
         }
 
-        .product-color {
-            padding-right: 71px;
-            font-size: 6px;
-            font-family: sans-serif;
+        .product-model {
+            padding-right: 60px;
+            font-size: 8px;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .product-colour {
-            font-size: 6px;
-            font-family: sans-serif;
+            font-size: 8px;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .product-msrp {
-            font-size: 6px;
-            font-family: sans-serif;
+            font-size: 8px;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .product-sku {
-            font-size: 6px;
-            font-family: sans-serif;
+            font-size: 8px;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .product-ukuran {
-            font-size: 6px;
-            font-family: sans-serif;
+            font-size: 8px;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .product-code {
-            font-size: 6px;
-            padding-right: 95px;
-            font-family: sans-serif;
+            font-size: 8px;
+            padding-right: 90px;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .product-size {
-            font-size: 5px;
+            font-size: 8px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -44,7 +44,7 @@
         }
 
         .product-price {
-            font-size: 20px;
+            font-size: 8px;
         }
 
         .boxed {
@@ -114,7 +114,8 @@
         .pono {
             font-family: sans-serif;
             color: black;
-            font-size: 7.5px;
+            font-weight: bold;
+            font-size: 8px;
             background-color: #fff;
             padding: 1px;
             transform: rotate(90deg);
