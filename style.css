@@ -1,0 +1,127 @@
+        .product-name {
+            font-size: 10px;
+            color: black;
+        }
+
+        .product-color {
+            padding-right: 71px;
+            font-size: 6px;
+            font-family: sans-serif;
+        }
+
+        .product-colour {
+            font-size: 6px;
+            font-family: sans-serif;
+        }
+
+        .product-msrp {
+            font-size: 6px;
+            font-family: sans-serif;
+        }
+
+        .product-sku {
+            font-size: 6px;
+            font-family: sans-serif;
+        }
+
+        .product-ukuran {
+            font-size: 6px;
+            font-family: sans-serif;
+        }
+
+        .product-code {
+            font-size: 6px;
+            padding-right: 95px;
+            font-family: sans-serif;
+        }
+
+        .product-size {
+            font-size: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .product-price {
+            font-size: 20px;
+        }
+
+        .boxed {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #dee2e6;
+            padding: 1rem;
+            height: 7.5cm;
+            width: 5cm;
+        }
+
+        .barcode {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-size-title {
+            font-size: 15px;
+        }
+
+        .model-lb {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .model-lb h2,
+        .model-lb h3 {
+            margin: 0;
+        }
+
+        .sku-item {
+            margin-bottom: 8rem;
+            position: relative;
+        }
+
+        .sku-item p {
+            padding-left: 15px;
+            margin-bottom: 0;
+        }
+
+        .sku-item hr {
+            color: #000;
+        }
+
+        .qr {
+            margin-top: 10px;
+            position: flex;
+            bottom: 80;
+            left: 50%;
+            transform: translateX(-5%);
+        }
+
+        .qr-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -10px;
+            margin-left: -20px;
+        }
+
+        .information,
+        .pono {
+            font-family: sans-serif;
+            color: black;
+            font-size: 7.5px;
+            background-color: #fff;
+            padding: 1px;
+            transform: rotate(90deg);
+        }
+
+        @media print {
+        .col:nth-child(6n+1) {
+            page-break-before: always;
+        }
+    }
