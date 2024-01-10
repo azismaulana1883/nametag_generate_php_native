@@ -48,7 +48,6 @@ include 'connection.php';
                     </div>
                 </div>
             </div>
-            <br>
         <?php
         }
         ?>

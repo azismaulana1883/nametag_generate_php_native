@@ -56,6 +56,7 @@
             padding: 1rem;
             height: 7.5cm;
             width: 5cm;
+            margin-bottom: 0.3cm;
         }
 
         .barcode { 
@@ -183,6 +184,7 @@
             padding: 1rem;
             height: 7.5cm;
             width: 5cm;
+            margin-bottom: 0.3cm;
             page-break-inside: avoid;
         }
 
