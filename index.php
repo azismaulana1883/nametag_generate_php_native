@@ -13,6 +13,23 @@ include 'connection.php';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.3/JsBarcode.all.min.js"></script>
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @media print {
+            body{
+                padding: 0;
+                margin: 0;
+            }
+    .boxed {
+        page-break-before: always;
+        height: 3in;
+        width: 2in;
+        /* border: 1px solid #000; */
+    }
+    @page {
+    size: 2in 3in; /* Ganti dengan ukuran kertas label yang Anda inginkan */
+}
+}
+    </style>
 </head>
 
 <body class="d-flex justify-content-center align-items-center min-vh-100">
