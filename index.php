@@ -15,20 +15,32 @@ include 'connection.php';
     <link rel="stylesheet" href="style.css">
     <style>
         @media print {
-            body{
-                padding: 0;
-                margin: 0;
-            }
+    body {  
+        padding: 0;
+        margin: 0;
+    }
+
     .boxed {
         page-break-before: always;
         height: 3in;
         width: 2in;
-        /* border: 1px solid #000; */
+        /* Add these lines to ensure no extra space at the bottom of the page */
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
+
     @page {
-    size: 2in 3in; /* Ganti dengan ukuran kertas label yang Anda inginkan */
+        size: 2in 3in;
+        margin: 0; /* Resetting margin for @page */
+    }
+
+    .barcode {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0; /* Ensure no extra space below barcode */
+    }
 }
-}
+
     </style>
 </head>
 
@@ -46,7 +58,7 @@ include 'connection.php';
                         <h3 class="product-code"><?php echo $row['sap_code']; ?></h3>
                         <!-- Menambahkan atribut jsbarcode-value dengan kode UPC yang valid -->
                         <svg class="barcode" jsbarcode-format="upc" jsbarcode-value="<?php echo $row['upc_code']; ?>"
-                            jsbarcode-textmargin="0" jsbarcode-fontoptions="bold" jsbarcode-width="3" jsbarcode-height="50"
+                            jsbarcode-textmargin="0" jsbarcode-fontoptions="bold" jsbarcode-width="2" jsbarcode-height="50"
                             jsbarcode-fontSize="20">
                         </svg>
                     </div>
@@ -55,7 +67,7 @@ include 'connection.php';
                         <p class="product-ukuran">Size : <?php echo $row['size_description']; ?></p>
                         <p class="product-colour">Colour : <?php echo $row['colour_description']; ?> (<?php echo $row['colour_code']; ?>)</p>
                         <p class="product-msrp">MSRP CAD : <?php echo $row['msrp_cad']; ?></p>
-                        <hr>
+                        <span class="garis"></span>
                         <div class="qr-container">
                             <div class="information"><?php echo $row['qr_caption']; ?></div>
                             <!-- Menambahkan atribut data-value dengan data QR code yang valid -->
@@ -92,8 +104,8 @@ include 'connection.php';
             if (qrData) {
                 var qr = new QRCode(element, {
                     text: qrData,
-                    width: 90,
-                    height: 90,
+                    width: 80,
+                    height: 80,
                 });
             } else {
                 console.error("Data QR code tidak valid:", qrData);
