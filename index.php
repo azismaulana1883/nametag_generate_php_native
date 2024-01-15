@@ -51,10 +51,10 @@ include 'connection.php';
         while ($row = $result->fetch_assoc()) {
         ?>
             <div class="row">
-                <div class="col-lg-6 boxed">
+                <div class="col-lg-6 boxed border">
                     <h1 class="product-name text-center "><b><?php echo $row['model_description']; ?></b></h1>
                     <div class="model-lb">
-                        <div class="product_brand">
+                        <div class="product_brand" style="width: 130px;">
                             <h3 class="product-model">Model: <?php echo $row['model_number']; ?></h3>
                             <h3 class="product-code"><?php echo $row['sap_code']; ?></h3>
                         </div>

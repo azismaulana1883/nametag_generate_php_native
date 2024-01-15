@@ -9,7 +9,7 @@
     }
 
         .product-name {
-            font-size: 13.7786px;
+            font-size: 10.5px;
             color: black;
             font-weight: bolder;
             font-family: Arial, Arial Narrow, sans-serif;
@@ -52,9 +52,9 @@
         }
 
         .product-code {
-            font-size: 8px;
+            font-size: 9.2px;
             text-align: left;
-            padding-right: 92px;
+            /* padding-right: 92px; */
             font-family: sans-serif;
             color: black;
             font-weight: bold;
@@ -159,7 +159,7 @@
     @media print {
         .product-name {
             font-family: Arial, Arial Narrow, sans-serif;
-            font-size: 10.7px;
+            font-size: 10.5px;
             color: black;
             font-weight: bolder;
         }
@@ -202,7 +202,7 @@
         }
 
         .product-code {
-            font-size: 8px;
+            font-size: 9.2px;
             text-align: left;
             /* padding-right: 92px; */
             font-family: sans-serif;
