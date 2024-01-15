@@ -54,8 +54,10 @@ include 'connection.php';
                 <div class="col-lg-6 boxed">
                     <h1 class="product-name text-center "><b><?php echo $row['model_description']; ?></b></h1>
                     <div class="model-lb">
-                        <h2 class="product-model">Model: <?php echo $row['model_number']; ?></h2>
-                        <h3 class="product-code"><?php echo $row['sap_code']; ?></h3>
+                        <div class="product_brand">
+                            <h3 class="product-model">Model: <?php echo $row['model_number']; ?></h3>
+                            <h3 class="product-code"><?php echo $row['sap_code']; ?></h3>
+                        </div>
                         <!-- Menambahkan atribut jsbarcode-value dengan kode UPC yang valid -->
                         <svg class="barcode" jsbarcode-format="upc" jsbarcode-value="<?php echo $row['upc_code']; ?>"
                             jsbarcode-textmargin="0" jsbarcode-fontoptions="bold" jsbarcode-width="2" jsbarcode-height="50"
@@ -66,13 +68,23 @@ include 'connection.php';
                         <p class="product-sku">SKU : <?php echo $row['sku_number']; ?></p>
                         <p class="product-ukuran">Size : <?php echo $row['size_description']; ?></p>
                         <p class="product-colour">Colour : <?php echo $row['colour_description']; ?> (<?php echo $row['colour_code']; ?>)</p>
-                        <p class="product-msrp">MSRP CAD : <?php echo $row['msrp_cad']; ?></p>
+                    <?php
+                        // Periksa apakah msrp_cad memiliki nilai
+                        if (!empty($row['msrp_cad'])) {
+                            echo '<p class="product-msrp">MSRP CAD : $' . $row['msrp_cad'] . '</p>';
+                        }
+
+                        // Periksa apakah msrp_usd memiliki nilai
+                        if (!empty($row['msrp_usd'])) {
+                            echo '<p class="product-msrp">MSRP USD : $' . $row['msrp_usd'] . '</p>';
+                        }
+                    ?>
                         <span class="garis"></span>
                         <div class="qr-container">
                             <div class="information"><?php echo $row['qr_caption']; ?></div>
                             <!-- Menambahkan atribut data-value dengan data QR code yang valid -->
                             <div class="qr" data-value="<?php echo $row['qr_data']; ?>"></div>
-                            <div class="pono"><?php echo $row['pono']; ?></div>
+                            <div class="pono">PO<?php echo $row['pono']; ?></div>
                         </div>
                     </div>
                 </div>
